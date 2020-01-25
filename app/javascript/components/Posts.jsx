@@ -11,16 +11,6 @@ class Posts extends React.Component {
     }
 
     componentDidMount() {
-        // const url = "/api/v1/posts/index";
-        // fetch(url)
-        //   .then(response => {
-        //     if (response.ok) {
-        //       return response.json();
-        //     }
-        //     throw new Error("Network response was not ok.");
-        //   })
-        //   .then(response => this.setState({ posts: response }))
-        //   .catch(() => this.props.history.push("/"));
         
         axios.get('http://localhost:3000/api/v1/posts/index')
         .then( (data) => {
